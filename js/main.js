@@ -17,9 +17,9 @@ function setup() {
 
 function draw() {
   clear();
-  // speed of changing images
+  //  every 8 frames, increment the counter to move to the next image
   if (frameCount % 8 === 0) {
-    counter = (counter + 1) % coinsFrames.length; // to not go over the bounds of how many images
+    counter = (counter + 1) % coinsFrames.length; // to not try to access a frame positioned out of the boundaries of our array
   }
   const coinFrame = coinsFrames[counter];
   image(coinFrame, 0, 0, 500, 500);
